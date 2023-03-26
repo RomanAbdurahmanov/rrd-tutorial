@@ -10,6 +10,7 @@ import Home from './pages/Home'
 import About from './pages/About'
 import FAQ from './pages/Help/FAQ'
 import ContactUs from './pages/Help/ContactUs'
+import Careers, { careersLoader } from './pages/Help/Careers'
 
 //layouts
 import RootLayout from './layouts/RootLayout'
@@ -25,6 +26,7 @@ const router = createBrowserRouter(
         <Route path='help/FAQ' element={<FAQ />} />
         <Route path='help/ContactUs' element={<ContactUs />} />
       </Route>
+      <Route path='careers' element={<Careers />} loader={careersLoader} />
       <Route path={'*'} element={<NotFound />} />
     </Route>
   )

@@ -11,6 +11,7 @@ export default function RootLayout() {
           <NavLink to={'/'}>Home</NavLink>
           <NavLink to={'/About'}>About</NavLink>
           <NavLink to={'/help'}>Help</NavLink>
+          <NavLink to={'/careers'}>Careers</NavLink>
         </nav>
       </header>
       <main>
