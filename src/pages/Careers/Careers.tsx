@@ -1,22 +1,13 @@
-import React from 'react'
 import { Link, useLoaderData } from 'react-router-dom'
-
-export interface CareerDataType {
-  id: number
-  title: string
-  salary: number
-  location: string
-}
+import { CareerDataType } from '../../Interfaces'
 
 const Careers = () => {
   const careers = useLoaderData() as CareerDataType[]
 
   return (
     <div className='careers'>
-      <h2>Careers</h2>
-      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
       {careers.map((career) => (
-        <Link to='/' key={career.id}>
+        <Link to={career.id.toString()} key={career.id}>
           <p>{career.title}</p>
           <p>Based in {career.location}</p>
         </Link>

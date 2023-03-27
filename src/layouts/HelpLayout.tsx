@@ -11,8 +11,8 @@ function HelpLayout() {
       </p>
 
       <nav>
-        <NavLink to={'help/FAQ'}>FAQ</NavLink>
-        <NavLink to={'help/ContactUs'}>Contact Us</NavLink>
+        <NavLink to={'FAQ'}>FAQ</NavLink>
+        <NavLink to={'ContactUs'}>Contact Us</NavLink>
       </nav>
 
       <main>
