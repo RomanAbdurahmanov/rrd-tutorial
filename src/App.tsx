@@ -21,6 +21,7 @@ import RootLayout from './layouts/RootLayout'
 import HelpLayout from './layouts/HelpLayout'
 import CareerLayout from './layouts/CareerLayout'
 import ErrorHandler from './pages/ErrorHandler'
+import Breadcrumbs from './Components/Breadcrumbs'
 
 const router = createBrowserRouter(
   createRoutesFromElements(
