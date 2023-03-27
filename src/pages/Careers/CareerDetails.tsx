@@ -6,7 +6,7 @@ const CareerDetails = () => {
   const career = useLoaderData() as CareerDataType
 
   return (
-    <div className='careers-details'>
+    <div className='career-details'>
       <h2>Career details for {career.title}</h2>
       <p>Starting salary: {career.salary}$</p>
       <p>Location: {career.location}</p>
@@ -26,6 +26,9 @@ export const careerDetailsLoader = async ({ params }: { params: any }) => {
   const { id } = params
   const res = await fetch('http://localhost:4000/careers/' + id)
 
+  if (!res.ok) {
+    throw Error('Cannot find this carrer.')
+  }
   return res.json()
 }
 

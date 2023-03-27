@@ -20,6 +20,7 @@ import CareerDetails, {
 import RootLayout from './layouts/RootLayout'
 import HelpLayout from './layouts/HelpLayout'
 import CareerLayout from './layouts/CareerLayout'
+import ErrorHandler from './pages/ErrorHandler'
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -30,7 +31,11 @@ const router = createBrowserRouter(
         <Route path='FAQ' element={<FAQ />} />
         <Route path='ContactUs' element={<ContactUs />} />
       </Route>
-      <Route path='careers' element={<CareerLayout />}>
+      <Route
+        path='careers'
+        element={<CareerLayout />}
+        errorElement={<ErrorHandler />}
+      >
         <Route index element={<Careers />} loader={careersLoader} />
         <Route
           path=':id'
