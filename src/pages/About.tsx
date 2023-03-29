@@ -1,6 +1,13 @@
-import React from 'react'
+import { useState } from 'react'
+import { Navigate } from 'react-router-dom'
 
 function About() {
+  const [name, setName] = useState<string | null>('mario')
+
+  if (!name) {
+    return <Navigate to='/' replace={true} />
+  }
+
   return (
     <div className='about'>
       <h2>About Us</h2>
@@ -25,6 +32,13 @@ function About() {
         quia illum officia obcaecati provident nulla odio molestiae suscipit
         quasi.
       </p>
+      <button
+        onClick={() => {
+          setName(null)
+        }}
+      >
+        Logout
+      </button>
     </div>
   )
 }

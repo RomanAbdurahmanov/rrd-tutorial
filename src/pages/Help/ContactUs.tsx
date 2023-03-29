@@ -1,5 +1,4 @@
-import React from 'react'
-import { ActionFunction, Form, redirect, useActionData } from 'react-router-dom'
+import { Form, redirect, useActionData } from 'react-router-dom'
 
 function ContactUs() {
   const data = useActionData() as { error: string }
