@@ -9,9 +9,9 @@ import {
 import Home from './pages/Home'
 import About from './pages/About'
 import FAQ from './pages/Help/FAQ'
+import ErrorHandler from './pages/ErrorHandler'
 import ContactUs, { contactAction } from './pages/Help/ContactUs'
 import Careers, { careersLoader } from './pages/Careers/Careers'
-import NotFound from './pages/NotFound'
 import CareerDetails, {
   careerDetailsLoader,
 } from './pages/Careers/CareerDetails'
@@ -20,7 +20,6 @@ import CareerDetails, {
 import RootLayout from './layouts/RootLayout'
 import HelpLayout from './layouts/HelpLayout'
 import CareerLayout from './layouts/CareerLayout'
-import ErrorHandler from './pages/ErrorHandler'
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -48,7 +47,7 @@ const router = createBrowserRouter(
         />
       </Route>
 
-      <Route path={'*'} element={<NotFound />} />
+      <Route path={'*'} element={<ErrorHandler />} />
     </Route>
   )
 )
